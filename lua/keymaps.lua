@@ -10,6 +10,8 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', silent)
 vim.keymap.set('n', '<C-k>', '<C-w>k', silent)
 vim.keymap.set('n', '<C-l>', '<C-w>l', silent)
 vim.keymap.set('n', ';', ':')
+vim.keymap.set('n', '<leader>so', ':source %<cr>', { silent = true })
+vim.keymap.set('n', '<leader>h', ':nohl<cr>', { silent = true })
 
 -- use <up> and <down> to move up or down in command line's pop up menu
 vim.keymap.set('c', '<down>', function()
@@ -22,8 +24,18 @@ vim.keymap.set('c', '<up>', function()
 end, { expr = true })
 
 -- Window & splits
-vim.keymap.set('n', '<leader>sk', ':set nosplitbelow<cr>:split<cr>:set splitbelow<cr>')
-vim.keymap.set('n', '<leader>sj', ':split<cr>')
-vim.keymap.set('n', '<leader>sl', ':vsplit<cr>')
-vim.keymap.set('n', '<leader>sh', ':set nosplitright<cr>:vsplit<cr>:set splitright')
+vim.keymap.set('n', '<leader>sk', ':set nosplitbelow<cr>:split<cr>:set splitbelow<cr>', { silent = true })
+vim.keymap.set('n', '<leader>sj', ':split<cr>', { silent = true })
+vim.keymap.set('n', '<leader>sl', ':vsplit<cr>', { silent = true })
+vim.keymap.set('n', '<leader>sh', ':set nosplitright<cr>:vsplit<cr>:set splitright<cr>', { silent = true })
 
+vim.keymap.set('n', '<A-]>', ':vertical resize +5<cr>', { silent = true })
+vim.keymap.set('n', '<A-[>', ':vertical resize -5<cr>', { silent = true })
+vim.keymap.set('n', "<A-'>", ':resize +5<cr>', { silent = true })
+vim.keymap.set('n', '<A-;>', ':resize -5<cr>', { silent = true })
+
+-- Tabs
+vim.keymap.set('n', '<leader>tn', ':tabe<cr>', silent)
+vim.keymap.set('n', '<leader>th', ':-tabnext<cr>', silent)
+vim.keymap.set('n', '<leader>tl', ':+tabnext<cr>', silent)
+vim.keymap.set('n', '<leader>ts', ':tab split<cr>', silent)

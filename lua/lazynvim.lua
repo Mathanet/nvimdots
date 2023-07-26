@@ -11,4 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins")
+local opts = {
+	install = {
+		missing = true,
+		colorscheme =  { "catppuccin" },
+	}
+}
+require("lazy").setup("plugins", opts)

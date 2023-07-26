@@ -8,11 +8,15 @@ return {
 				enable = true,
 				use_treesitter = true,
 				style = mocha.yellow,
+				chars = {
+					right_arrow = "➤",
+				}
 			},
 			indent = {
-				use_treesitter = true,
+				enable = true,
+				use_treesitter = false,
 				chars = { "│" }, -- more code can be found in https://unicodeplus.com/
-				style = {mocha.surface2},
+				style = {mocha.surface0},
 			},
 			blank = {
 				enable = false,

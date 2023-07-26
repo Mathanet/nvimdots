@@ -8,7 +8,6 @@ return {
 			auto_install = true,
 			highlight = {
 				enable = true,
-
 				-- NOTE: these are the name of parsers and not the filetype.
 				disable = {},
 				-- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
@@ -19,6 +18,9 @@ return {
 						-- return true
 					-- end
 				-- end,
+			},
+			indent = {
+				enable = true,
 			},
 		})
 	end

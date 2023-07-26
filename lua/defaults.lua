@@ -3,6 +3,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 vim.env.NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
+vim.opt.exrc = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
@@ -18,7 +19,7 @@ vim.opt.scrolloff = 6
 vim.opt.ttimeoutlen = 50
 vim.opt.timeout = true
 vim.opt.viewoptions = 'cursor,folds,slash,unix'
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.showmode = true

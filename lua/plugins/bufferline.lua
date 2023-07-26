@@ -16,5 +16,7 @@ return {
 				}
 			}
 		}
+		vim.keymap.set('n', '<a-h>', ':BufferLineCyclePrev<cr>', { silent = true })
+		vim.keymap.set('n', '<a-l>', ':BufferLineCycleNext<cr>', { silent = true })
 	end,
 }

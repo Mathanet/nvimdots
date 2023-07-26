@@ -1,10 +1,10 @@
 vim.g.mapleader = " "
 
+-- https://github.com/
 -- vim.keymap.set({mode}, {lhs}, {rhs}, )
 local silent = { silent = true }
 vim.keymap.set('n', 'Q', ':q<cr>', silent)
 vim.keymap.set('n', 'S', ':w<cr>', silent)
-vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<C-h>', '<C-w>h', silent)
 vim.keymap.set('n', '<C-j>', '<C-w>j', silent)
 vim.keymap.set('n', '<C-k>', '<C-w>k', silent)
@@ -12,6 +12,7 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', silent)
 vim.keymap.set('n', ';', ':')
 vim.keymap.set('n', '<leader>so', ':source %<cr>', { silent = true })
 vim.keymap.set('n', '<leader>h', ':nohl<cr>', { silent = true })
+vim.keymap.set('n', 'g=', 'ggVG=<c-o>', { desc = "File Formated" })
 
 -- use <up> and <down> to move up or down in command line's pop up menu
 vim.keymap.set('c', '<down>', function()
@@ -29,10 +30,10 @@ vim.keymap.set('n', '<leader>sj', ':split<cr>', { silent = true })
 vim.keymap.set('n', '<leader>sl', ':vsplit<cr>', { silent = true })
 vim.keymap.set('n', '<leader>sh', ':set nosplitright<cr>:vsplit<cr>:set splitright<cr>', { silent = true })
 
-vim.keymap.set('n', '<A-]>', ':vertical resize +5<cr>', { silent = true })
-vim.keymap.set('n', '<A-[>', ':vertical resize -5<cr>', { silent = true })
-vim.keymap.set('n', "<A-'>", ':resize +5<cr>', { silent = true })
-vim.keymap.set('n', '<A-;>', ':resize -5<cr>', { silent = true })
+vim.keymap.set('n', '<A-]>', ':vertical resize +2<cr>', { silent = true })
+vim.keymap.set('n', '<A-[>', ':vertical resize -2<cr>', { silent = true })
+vim.keymap.set('n', "<A-'>", ':resize +2<cr>', { silent = true })
+vim.keymap.set('n', '<A-;>', ':resize -2<cr>', { silent = true })
 
 -- Tabs
 vim.keymap.set('n', '<leader>tn', ':tabe<cr>', silent)
